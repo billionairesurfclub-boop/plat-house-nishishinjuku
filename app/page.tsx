@@ -100,6 +100,26 @@ export default function Home() {
           </div>
         </section>
 
+
+        {rooms[0]?.images?.length > 0 && (
+          <section id="gallery" className="py-14 px-4 bg-gray-50">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">施設ギャラリー</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {rooms[0].images.map((src, i) => (
+                  <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200">
+                    <img
+                      src={src}
+                      alt={`施設写真 ${i + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                      loading={i < 6 ? "eager" : "lazy"}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         <section id="access" className="py-14 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">アクセス</h2>
