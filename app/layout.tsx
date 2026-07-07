@@ -40,6 +40,13 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-gray-900">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4S9GLVKTT4" strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-4S9GLVKTT4');
+        `}</Script>
         <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LodgingBusiness",
