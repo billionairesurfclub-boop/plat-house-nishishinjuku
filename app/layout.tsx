@@ -9,6 +9,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "gXHCgYW1liWYzDHLdMnZqsms3IllJliPGWeecgZRK5E",
+  },
   title: "ぷらっとハウス西新宿 | 新宿 130㎡ 一棟貸し切り 最大14名",
   description:
     "西新宿５丁目駅・初台駅徒歩10分。130㎡の一棟まるごと貸し切り。6つの寝室で最大14名。Netflix・Nintendo Switch・VRヘッドセット・10ギガインターネット・ドラム式洗濯機完備。新宿観光・グループ旅行に最適。",
