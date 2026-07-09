@@ -107,12 +107,14 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">施設ギャラリー</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {rooms[0].images.map((src, i) => (
-                  <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200">
-                    <img
+                  <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200">
+                    <Image
                       src={src}
                       alt={`施設写真 ${i + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                      loading={i < 6 ? "eager" : "lazy"}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover hover:scale-105 transition duration-300"
+                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -183,12 +185,12 @@ export default function Home() {
         <section id="booking" className="py-20 px-4 bg-gray-900 text-white">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-3">新宿徒歩圏内。130㎡で、大人数でも快適に</h2>
-            <p className="text-gray-400 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
-            <p className="text-gray-500 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
+            <p className="text-gray-300 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
+            <p className="text-gray-400 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
             <div className="bg-gray-800 rounded-2xl p-6 mb-6">
               <p className="text-3xl font-bold mb-1">¥{hotel.price.min.toLocaleString()}〜</p>
-              <p className="text-gray-400 text-sm">1泊あたり（税込）+ 清掃費別途 · 最大14名</p>
-              <p className="text-gray-500 text-xs mt-2">14名利用時 1人あたり約¥{Math.floor(hotel.price.min / 14).toLocaleString()}〜</p>
+              <p className="text-gray-300 text-sm">1泊あたり（税込）+ 清掃費別途 · 最大14名</p>
+              <p className="text-gray-400 text-xs mt-2">14名利用時 1人あたり約¥{Math.floor(hotel.price.min / 14).toLocaleString()}〜</p>
             </div>
             <a href={hotel.bookingUrl} target="_blank" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">今すぐ最安値で予約する</a>
           </div>
@@ -196,7 +198,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-gray-900 border-t border-gray-800 py-8 px-4">
-        <div className="max-w-5xl mx-auto text-center text-gray-500 text-sm">
+        <div className="max-w-5xl mx-auto text-center text-gray-400 text-sm">
           <p className="mb-2">{hotel.name.ja}</p>
           <p className="mb-2">{hotel.address.ja}</p>
           <p className="mb-4">TEL: {hotel.phone}</p>
