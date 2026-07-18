@@ -72,6 +72,9 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                  <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                    <Image src={room.images[0]} alt={room.name.ja} fill className="object-cover" />
+                  </div>
                   <div className="p-5">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-bold text-gray-900">{room.name.ja}</h3>

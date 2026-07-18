@@ -183,7 +183,7 @@ export const rooms = [
       ja: "1階のシンプルな寝室。ダブルベッドでゆったりとお過ごしいただけます。",
       en: "A simple first floor bedroom with a double bed.",
     },
-    images: [],
+    images: ["/images/room-1f-c-1.jpg"],
   },
   {
     id: "room-3f-d",
@@ -195,7 +195,7 @@ export const rooms = [
       ja: "3階の寝室。クイーンサイズベッドと開放的な空間が自慢のお部屋です。",
       en: "Third floor bedroom with a queen-size bed and open, airy atmosphere.",
     },
-    images: [],
+    images: ["/images/room-3f-d-1.jpg"],
   },
   {
     id: "room-3f-e",
@@ -207,7 +207,7 @@ export const rooms = [
       ja: "3階の明るい寝室。クイーンサイズベッドで快適にお休みいただけます。",
       en: "A bright third floor bedroom with a queen-size bed.",
     },
-    images: [],
+    images: ["/images/room-3f-e-1.jpg"],
   },
   {
     id: "room-3f-f",
@@ -219,7 +219,7 @@ export const rooms = [
       ja: "3階の静かな寝室。ゆっくりとお休みいただける落ち着いた空間です。",
       en: "A quiet third floor bedroom with a queen-size bed.",
     },
-    images: [],
+    images: ["/images/room-3f-f-1.jpg"],
   },
 ];
 
